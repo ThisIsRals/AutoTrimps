@@ -738,10 +738,10 @@ queuescript.type = 'text/javascript';
 queuescript.src = 'https://Zorn192.github.io/AutoTrimps/FastPriorityQueue.js';
 head.appendChild(queuescript);
 //[looting,toughness,power,motivation,pheromones,artisanistry,carpentry,prismal,equality,criticality,resilience,tenacity,greed,frenzy]
-var preset_Rspace = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var preset_RZek059 = [7, 10, 5, 1, 0.5, 2, 12, 9, 0.5, 2, 5, 0, 0, 0];
-var preset_RZekmelt = [10, 0.5, 2, 0.5, 0.3, 1.2, 3, 0.5, 1, 3, 6, 18, 20, 0];
-var preset_RZekquag = [8, 0.7, 1.8, 0.8, 0.2, 1.3, 3.3, 0.6, 0.8, 2.8, 6.2, 18, 27, 12];
+var preset_Rspace = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ];
+var preset_RZek059 = [7, 10, 5, 1, 0.5, 2, 12, 9, 0.5, 2, 5, 0, 0, 0, 0, 0, ];
+var preset_RZekmelt = [10, 0.5, 2, 0.5, 0.3, 1.2, 3, 0.5, 1, 3, 6, 18, 20, 0, 0, 0, ];
+var preset_RZekquag = [8, 0.7, 1.8, 0.8, 0.2, 1.3, 3.3, 0.6, 0.8, 2.8, 6.2, 18, 27, 12, 0, 0, ];
 var RpresetList = [preset_RZek059,preset_RZekmelt,preset_RZekquag,preset_Rspace];
 var RpresetListHtml = "\
 <option id='preset_RZek059'>Zek (z1-59)</option>\
@@ -793,20 +793,20 @@ RAutoPerks.displayGUI = function() {
     //Line 1 of the UI
     apGUI.$ratiosLine1 = document.createElement("DIV");
     apGUI.$ratiosLine1.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine1 = ["Equality", "Carpentry","Pheromones","Motivation","Artisanistry","Power"];
+    var listratiosLine1 = ["Equality", "Carpentry","Pheromones","Motivation","Artisanistry"];;
     for (var i in listratiosLine1)
         RAutoPerks.createInput(listratiosLine1[i],apGUI.$ratiosLine1);
     apGUI.$customRatios.appendChild(apGUI.$ratiosLine1);
     //Line 2 of the UI
     apGUI.$ratiosLine2 = document.createElement("DIV");
     apGUI.$ratiosLine2.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine2 = ["Looting","Toughness","Prismal","Criticality","Resilience","Tenacity"];
+    var listratiosLine2 = ["Power","Looting","Toughness","Prismal","Criticality"];
     for (var i in listratiosLine2)
         RAutoPerks.createInput(listratiosLine2[i],apGUI.$ratiosLine2);
     //Line 3 of the UI
     apGUI.$ratiosLine3 = document.createElement("DIV");
     apGUI.$ratiosLine3.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine3 = ["Greed","Frenzy","Championism", "Masterfulness", "Smithology"];
+    var listratiosLine3 = ["Resilience","Tenacity","Greed","Frenzy","Championism", "Smithology"];
     for (var i in listratiosLine3)
         RAutoPerks.createInput(listratiosLine3[i],apGUI.$ratiosLine3);
     //Create dump perk dropdown
