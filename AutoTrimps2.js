@@ -1,6 +1,6 @@
-var ATversion = 'Zek v5.3.1',
+var ATversion = 'Zek v5.3.2',
     atscript = document.getElementById('AutoTrimps-script'),
-    basepath = 'https://dansseg.github.io/AutoTrimps/', //Link to your own Github here if you forked!
+    basepath = 'https://thisisrals.github.io/AutoTrimps/', //Link to your own Github here if you forked!
     modulepath = 'modules/';
 null !== atscript && (basepath = atscript.src.replace(/AutoTrimps2\.js$/, ''));
 
@@ -34,16 +34,22 @@ function initializeAutoTrimps() {
 
 var changelogList = [];
 changelogList.push({
+    date: "10/11/2026",
+    version: "v5.3.2",
+    description: "<b>Trimps v5.10.1</b> Added support for the Masterfulness and Smithology perks. ",
+    isNew: true
+});
+changelogList.push({
     date: "16/09/2026",
     version: "v5.3.1",
     description: "<b>Trimps v5.10.1</b> Auto Bone Charges work in U2 now as well. ",
-    isNew: true
+    isNew: false
 });
 changelogList.push({
     date: "25/08/2026",
     version: "v5.3.0",
     description: "<b>Trimps v5.10.1</b> Added Mutated Heirlooms. ",
-    isNew: true
+    isNew: false
 });
 changelogList.push({
     date: "11/02/2023",
