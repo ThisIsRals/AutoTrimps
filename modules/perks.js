@@ -793,20 +793,20 @@ RAutoPerks.displayGUI = function() {
     //Line 1 of the UI
     apGUI.$ratiosLine1 = document.createElement("DIV");
     apGUI.$ratiosLine1.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine1 = ["Equality", "Carpentry","Pheromones","Motivation","Artisanistry"];
+    var listratiosLine1 = ["Equality", "Carpentry","Pheromones","Motivation","Artisanistry","Power"];
     for (var i in listratiosLine1)
         RAutoPerks.createInput(listratiosLine1[i],apGUI.$ratiosLine1);
     apGUI.$customRatios.appendChild(apGUI.$ratiosLine1);
     //Line 2 of the UI
     apGUI.$ratiosLine2 = document.createElement("DIV");
     apGUI.$ratiosLine2.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine2 = ["Power","Looting","Toughness","Prismal","Criticality"];
+    var listratiosLine2 = ["Looting","Toughness","Prismal","Criticality","Resilience","Tenacity"];
     for (var i in listratiosLine2)
         RAutoPerks.createInput(listratiosLine2[i],apGUI.$ratiosLine2);
     //Line 3 of the UI
     apGUI.$ratiosLine3 = document.createElement("DIV");
     apGUI.$ratiosLine3.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine3 = ["Resilience","Tenacity","Greed","Frenzy","Championism"];
+    var listratiosLine3 = ["Greed","Frenzy","Championism", "Masterfulness", "Smithology"];
     for (var i in listratiosLine3)
         RAutoPerks.createInput(listratiosLine3[i],apGUI.$ratiosLine3);
     //Create dump perk dropdown
@@ -1356,6 +1356,7 @@ RAutoPerks.initializePerks = function () {
     var packrat = new RAutoPerks.FixedPerk("packrat", 3, 30);
     var hunger = new RAutoPerks.FixedPerk("hunger", 1000000, 30);
     var observation = new RAutoPerks.FixedPerk("observation", 5000000000000000000, 50);
+    var masterfulness = new RAutoPerks.FixedPerk("masterfulness", 100000000000000000000000, 10);
     //var overkill = new RAutoPerks.FixedPerk("overkill", 1000000, 30);
     //variable
     var looting = new RAutoPerks.VariablePerk("looting", 1, false,             0, 0.05);
@@ -1373,15 +1374,18 @@ RAutoPerks.initializePerks = function () {
     var greed = new RAutoPerks.VariablePerk("greed", 10000000000, true,      12, 0.1, 40);
     var frenzy = new RAutoPerks.VariablePerk("frenzy", 1000000000000000, true,      13, 0.1);
     var championism = new RAutoPerks.VariablePerk("championism", 1000000000, true,      14, 0.1);
+    var smithology = new RAutoPerks.VariablePerk("smithology", 100000000000000000000000, true,      15, 0.1);
     
     equality.exprate = 1.5;
     observation.exprate = 2;
     championism.exprate = 5;
+    masterfulness.exprate = 50;
+    smithology.exprate = 4;
     //scruffy
 	//no
     //tier2
 	//no
-    RAutoPerks.perkHolder = [range, agility, bait, trumps, packrat, hunger, observation, /*overkill,*/ looting, toughness, power, motivation, pheromones, artisanistry, carpentry, prismal, resilience, criticality, tenacity, greed, frenzy, championism, equality];
+    RAutoPerks.perkHolder = [range, agility, bait, trumps, packrat, hunger, observation, /*overkill,*/ looting, toughness, power, motivation, pheromones, artisanistry, carpentry, prismal, resilience, criticality, tenacity, greed, frenzy, championism, equality, masterfulness, smithology];
     for(var i in RAutoPerks.perkHolder) {
         RAutoPerks.perkHolder[i].radLevel = 0;
         RAutoPerks.perkHolder[i].spent = 0;
