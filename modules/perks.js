@@ -806,9 +806,15 @@ RAutoPerks.displayGUI = function() {
     //Line 3 of the UI
     apGUI.$ratiosLine3 = document.createElement("DIV");
     apGUI.$ratiosLine3.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
-    var listratiosLine3 = ["Resilience","Tenacity","Greed","Frenzy","Championism", "Smithology", "Expansion"];
+    var listratiosLine3 = ["Resilience","Tenacity","Greed","Frenzy","Championism"];
     for (var i in listratiosLine3)
         RAutoPerks.createInput(listratiosLine3[i],apGUI.$ratiosLine3);
+    //Line 4 of the UI
+    apGUI.$ratiosLine4 = document.createElement("DIV");
+    apGUI.$ratiosLine4.setAttribute('style', 'display: inline-block; text-align: left; width: 100%');
+    var listratiosLine4 = ["Smithology", "Expansion"];
+    for (var i in listratiosLine4)
+        RAutoPerks.createInput(listratiosLine4[i],apGUI.$ratiosLine4);
     //Create dump perk dropdown
     apGUI.$dumpperklabel = document.createElement("Label");
     apGUI.$dumpperklabel.id = 'DumpPerk Label';
@@ -851,6 +857,7 @@ RAutoPerks.displayGUI = function() {
     apGUI.$ratiosLine1.appendChild(apGUI.$RratioPreset);
     apGUI.$customRatios.appendChild(apGUI.$ratiosLine2);
     apGUI.$customRatios.appendChild(apGUI.$ratiosLine3);
+    apGUI.$customRatios.appendChild(apGUI.$ratiosLine4);
     var $portalWrapper = document.getElementById("portalWrapper");
     $portalWrapper.appendChild(apGUI.$customRatios);
     RAutoPerks.initializePerks();
