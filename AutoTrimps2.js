@@ -1,4 +1,4 @@
-var ATversion = 'Zek v5.3.2',
+var ATversion = 'Zek v5.3.3',
     atscript = document.getElementById('AutoTrimps-script'),
     basepath = 'https://thisisrals.github.io/AutoTrimps/', //Link to your own Github here if you forked!
     modulepath = 'modules/';
@@ -33,6 +33,12 @@ function initializeAutoTrimps() {
 }
 
 var changelogList = [];
+changelogList.push({
+    date: "10/11/2026",
+    version: "v5.3.3",
+    description: "<b>Trimps v5.10.1</b> Added support for the Expansion perk. ",
+    isNew: true
+});
 changelogList.push({
     date: "10/11/2026",
     version: "v5.3.2",
